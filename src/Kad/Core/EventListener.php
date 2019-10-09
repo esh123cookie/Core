@@ -3,6 +3,7 @@
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerQuitEvent;
+use pocketmine\event\block\LeavesDecayEvent;
 use pocketmine\level\Position;
 
 class EventListener implements Listener {
@@ -28,5 +29,8 @@ class EventListener implements Listener {
         $player = $event->getPlayer();
         $name = $event->getName();
         $event->setQuitMessage("§8•§r" . $name . " §8has left");
+    }
+    public function onDecay(LeavesDecayEvent $event) {
+        $event->setCancelled(true);
     }
 
