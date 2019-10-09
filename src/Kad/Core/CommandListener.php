@@ -17,7 +17,7 @@ class CommandListener implements Listener {
     {
         if($cmd->getName() == "gmc") {
             if($sender instanceof Player) {
-                if($sender->hasPermission("orioncore.gmc.use")) {
+                if($sender->hasPermission("core.gmc.use")) {
                     $sender->setGamemode(1);
                     $sender->sendMessage($this->fts . TF::GREEN . "Your gamemode has been set to creative!");
                 } else {
@@ -27,7 +27,7 @@ class CommandListener implements Listener {
         }
         if($cmd->getName() == "gms") {
             if($sender instanceof Player) {
-                if($sender->hasPermission("orioncore.gms.use")) {
+                if($sender->hasPermission("core.gms.use")) {
                     $sender->setGamemode(0);
                     $sender->sendMessage($this->fts . TF::GREEN . "Your gamemode has been set to Survival!");
                 } else {
@@ -37,7 +37,7 @@ class CommandListener implements Listener {
         }
         if($cmd->getName() == "gma") {
             if($sender instanceof Player) {
-                if($sender->hasPermission("orioncore.gma.use")) {
+                if($sender->hasPermission("core.gma.use")) {
                     $sender->setGamemode(2);
                     $sender->sendMessage($this->fts . TF::GREEN . "Your gamemode has been set to Adventure!");
                 } else {
@@ -47,7 +47,7 @@ class CommandListener implements Listener {
         }
         if($cmd->getName() == "gmspc") {
             if($sender instanceof Player) {
-                if($sender->hasPermission("orioncore.gmspc.use")) {
+                if($sender->hasPermission("core.gmspc.use")) {
                     $sender->setGamemode(3);
                     $sender->sendMessage($this->fts . TF::GREEN . "Your gamemode has been set to Spectator!");
                 } else {
@@ -57,7 +57,7 @@ class CommandListener implements Listener {
         }
         if($cmd->getName() == "day") {
             if($sender instanceof Player) {
-                if($sender->hasPermission("orioncore.day.use")) {
+                if($sender->hasPermission("core.day.use")) {
                     $sender->getLevel()->setTime(6000);
                     $sender->sendMessage($this->fts . TF::GREEN . "Set the time to Day (6000) in your world!");
                 } else {
@@ -67,7 +67,7 @@ class CommandListener implements Listener {
         }
         if($cmd->getName() == "night") {
             if($sender instanceof Player) {
-                if($sender->hasPermission("orioncore.night.use")) {
+                if($sender->hasPermission("core.night.use")) {
                     $sender->getLevel()->setTime(16000);
                     $sender->sendMessage($this->fts . TF::GREEN . "Set the time to Night (16000) in your world!");
                 } else {
