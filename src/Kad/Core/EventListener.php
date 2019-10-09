@@ -4,6 +4,8 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\block\LeavesDecayEvent;
+use pocketmine\event\block\BlockPlaceEvent;
+use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\level\Position;
 
 class EventListener implements Listener {
@@ -33,4 +35,9 @@ class EventListener implements Listener {
     public function onDecay(LeavesDecayEvent $event) {
         $event->setCancelled(true);
     }
-
+    public function onBreak(BlockBreakEvent $event) {
+        $event->setCancelled(true);
+    }
+    public function onPlace(BlockPlaceEvent $event) {
+        $event->setCancelled(true);
+    }
