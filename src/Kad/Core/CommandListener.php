@@ -93,22 +93,12 @@ class CommandListener implements Listener {
         }
         if($cmd->getName() == "rules") {
             if($sender instanceof Player) {
-                $sender->sendMessage("§6§o§lOrion Minigames Rules§r");
+                $sender->sendMessage("§6§o§lServer Rules§r");
                 $sender->sendMessage("§f- §eNo Advertising");
                 $sender->sendMessage("§f- §eNo NSFW");
                 $sender->sendMessage("§f- §eNo cursing. (Censoring words is allowed.)");
                 $sender->sendMessage("§f- §eNo asking for OP/Ranks/Perms");
                 $sender->sendMessage("§f- §eUse Common Sense. Failure to do so will not exempt you from punishment.");
-            }
-        }
-        if($cmd->getName() == "info") {
-            if($sender instanceof Player) {
-                $sender->sendMessage("§6§o§lOrion Minigames Info§r");
-                $sender->sendMessage("§eOrion Minigames is a holdout server for the remnants");
-                $sender->sendMessage("§eof JM Pocket Creative, Nebula Games, & FruityMCPE.");
-                $sender->sendMessage("§eThe Main Owner is Switchblade304, although Jes'kad Ad'aryc does a lot of work.");
-                $sender->sendMessage("§eThe server is technically collectively owned by Jes'kad, Switchblade, Noah, and Celery.");
-                $sender->sendMessage("§eDiscord Link: https://discord.gg/ECGhkJc");
             }
         }
     return true;
