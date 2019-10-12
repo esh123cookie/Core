@@ -91,6 +91,9 @@ class CommandListener implements Listener {
                 $sender->sendMessage($this->fts . TF::RED . "An error has occurred. Please contact Jes'kad Ad'aryc#3845 on Discord to report this");
             }
         }
+        if($cmd->getName() == "daily") {
+            if($sender instanceof Player) {
+                $sender->
         if($cmd->getName() == "rules") {
             if($sender instanceof Player) {
                 $sender->sendMessage("§6§o§lServer Rules§r");
