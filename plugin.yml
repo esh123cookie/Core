@@ -1,0 +1,52 @@
+name: Core
+main: Clik\MGCore\Main
+version: 2.0.0
+api: 3.0.0
+author: Jes'kad Ad'aryc#3845
+commands:
+  gmc:
+    description: Changes your gamemode to Creative
+    permission: core.gmc.use
+  gms:
+    description: Changes your gamemode to Survival
+    permission: core.gms.use
+  gma:
+    description: Changes your gamemode to Adventure
+    permission: core.gma.use
+  gmspc:
+    description: Changes your gamemode to Spectator
+    permission: core.gmspc.use
+  day:
+    description: Changes the time to Day in the world your in
+    permission: core.day.use
+  night:
+    description: Changes the time to Night in the world your in
+    permission: core.night.use
+  hub:
+    description: Teleports you to the Hub
+    aliases: ["lobby","spawn"]
+  info:
+    description: Shows the servers Info
+  rules:
+    description: Shows the servers Rules
+
+permissions:
+  core.gmc.use:
+    description: GMC Command
+    default: OP
+  core.gms.use:
+    description: GMS Command
+    default: OP
+  core.gma.use:
+    description: GMA Command
+    default: OP
+  core.gmspc.use:
+    description: GMSPC Command
+    default: OP
+  core.day.use:
+    description: DAY Command
+    default: OP
+  core.night.use:
+    description: NIGHT Command
+    default: OP
+
