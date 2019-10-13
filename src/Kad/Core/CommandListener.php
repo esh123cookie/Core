@@ -95,13 +95,22 @@ class CommandListener implements Listener {
             if($sender instanceof Player) {
                 $chest = Item::get(000);
                 $pistol = Item::get(000);
-                $ammo = Item::get(000);
+                $ammo = ItemFactory::get(Item::ITEMNAME, 0, 64);
                 $chest->clearCustomName();
                 $chest->setCustomName("§o§bFlak Jacket§r");
                 $pistol->clearCustomName();
-                $pistol->setCustomName("§o§bDesert Eage Pistol§r");
+                $pistol->setCustomName("§o§bDesert Eagel Pistol§r");
                 $ammo->clearCustomName();
                 $ammo->setCustomName("§o§bAmmunition§r");
+                $sender->getInventory()->clearAll()
+                $sender->getInventory->addItem($pistol);
+                $sender->getInventory->addItem($ammo);
+                $sender->getArmorInventory()->clearAll();
+                $sender->getArmorInventory()->setChestplate($chestplate);
+            } else {
+                $sender->sendMessage("An error occured.");
+            }
+        }
         if($cmd->getName() == "rules") {
             if($sender instanceof Player) {
                 $sender->sendMessage("§6§o§lServer Rules§r");
