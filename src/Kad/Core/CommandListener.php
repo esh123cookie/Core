@@ -93,7 +93,15 @@ class CommandListener implements Listener {
         }
         if($cmd->getName() == "daily") {
             if($sender instanceof Player) {
-                $sender->
+                $chest = Item::get(000);
+                $pistol = Item::get(000);
+                $ammo = Item::get(000);
+                $chest->clearCustomName();
+                $chest->setCustomName("§o§bFlak Jacket§r");
+                $pistol->clearCustomName();
+                $pistol->setCustomName("§o§bDesert Eage Pistol§r");
+                $ammo->clearCustomName();
+                $ammo->setCustomName("§o§bAmmunition§r");
         if($cmd->getName() == "rules") {
             if($sender instanceof Player) {
                 $sender->sendMessage("§6§o§lServer Rules§r");
