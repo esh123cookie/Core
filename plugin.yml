@@ -1,5 +1,5 @@
 name: Core
-main: Kad\Core\Main
+main: Core\Main
 version: 2.0.0
 api: 3.0.0
 author: Jes'kad Ad'aryc#3845
