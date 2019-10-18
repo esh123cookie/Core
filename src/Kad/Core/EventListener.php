@@ -35,7 +35,21 @@ class EventListener implements Listener {
     }
     public function onDeath(PlayerDeathEvent $event) {
         $player = $event->getPlayer();
-        $
+        $name = $player->getName();
+        $cause = $event->getPlayer()->getLastDamageCause();
+        if($cause instanceof EntityDamageByEntityEvent and $cause->getDamager() instanceof Player) {
+            $killer = $cause->getDamager();
+            $event->setDeathMessage("§f•§r " . $killer . " §fkilled§r " . $name);
+        }
+    }
+    public function onRespawn(PlayerRespawnEvent $event) {
+        $world = $this->getServer()->getLevelByName("world");
+        $x = 16;
+        $y = 66;
+        $z = 16;
+        $pos = new Position($x, $y, $z, $world);
+        $event->setRespawnPosition($pos);
+    }
     public function onDecay(LeavesDecayEvent $event) {
         $event->setCancelled(true);
     }
