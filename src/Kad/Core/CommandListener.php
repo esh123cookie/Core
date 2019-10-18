@@ -102,7 +102,7 @@ class CommandListener implements Listener {
                 $pistol->setCustomName("§o§bDesert Eagel Pistol§r");
                 $ammo->clearCustomName();
                 $ammo->setCustomName("§o§bAmmunition§r");
-                $sender->getInventory()->clearAll()
+                $sender->getInventory()->clearAll();
                 $sender->getInventory->addItem($pistol);
                 $sender->getInventory->addItem($ammo);
                 $sender->getArmorInventory()->clearAll();
