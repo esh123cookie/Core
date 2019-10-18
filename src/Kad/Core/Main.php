@@ -12,7 +12,6 @@ public function onEnable(){
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
     $this->getServer()->getPluginManager()->registerEvents(new EventListener($this), $this);
     $this->getServer()->getPluginManager()->registerEvents(new CommandListener($this), $this);
- #  $this->getServer()->getPluginManager()->registerEvents(new ChestRefillTask($this), $this);
     $this->getServer()->getLevelByName("GTA5")->setAutoSave(false);
     }
 }
