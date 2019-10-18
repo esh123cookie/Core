@@ -11,7 +11,7 @@ class CommandListener implements Listener {
     private $plugin;
 
     public function __construct(Main $plugin) {
-        $this->plugin = $plugin
+        $this->plugin = $plugin;
     }
     public function onCommand(CommandSender $sender, Command $cmd, string $label, array $args): bool
     {
