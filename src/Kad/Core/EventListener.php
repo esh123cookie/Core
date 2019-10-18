@@ -59,3 +59,4 @@ class EventListener implements Listener {
     public function onPlace(BlockPlaceEvent $event) {
         $event->setCancelled(true);
     }
+}
